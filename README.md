@@ -1,0 +1,2 @@
+# Biomechanics-Enhanced-Fitness-and-Nutrition-Platform
+Developed a personalized fitness and nutrition web application that generates custom workout plans using machine learning tailored to users’ body metrics, fitness goals and activity levels. Integrated a smart calorie tracker and meal planner designed specifically for Indian dietary preferences, utilizing a curated database of local food items. 
