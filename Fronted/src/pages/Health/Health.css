@@ -1,0 +1,114 @@
+/* Apply Futura font to the entire form */
+body {
+  font-family: "Futura", sans-serif;
+}
+
+.health-details-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black; /* Black background */
+  background-image: url("../../../public/BG.jpg"); /* Replace with your image file name */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blurry white overlay in the center */
+.health-details-form-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 10%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  filter: blur(20px); /* Blur effect */
+  z-index: 1;
+}
+
+.health-details-form-content {
+  text-align: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Blur effect for the form */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  z-index: 2;
+  position: relative;
+}
+
+.health-details-question {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white; /* White text */
+}
+
+.health-details-subtext {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8); /* Light gray text */
+}
+
+.health-options {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.health-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: white; /* White text */
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 25px; /* Rounded corners */
+  transition: all 0.3s ease;
+}
+
+.health-option:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  border-color: rgba(255, 255, 255, 0.4); /* Lighter border on hover */
+}
+
+.health-option.selected {
+  background-color: #007bff; /* Blue background for selected options */
+  border-color: #007bff; /* Blue border for selected options */
+  color: white; /* White text for selected options */
+}
+
+.continue-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+}

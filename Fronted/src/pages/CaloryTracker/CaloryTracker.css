@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hello {
+  padding: 120px;
+  background-color: rgb(32, 33, 40);
+
+  background-image: url("../../../public/food.jpg"); /* Replace with your image file name */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.food-selector input {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.category-selector,
+.food-selector {
+  margin-bottom: 20px;
+}
+
+.category-selector label,
+.food-selector label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.category-selector select,
+.food-selector select {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.food-selector button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.food-selector button:hover {
+  background-color: #218838;
+}
+
+.selected-items {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected-items h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}

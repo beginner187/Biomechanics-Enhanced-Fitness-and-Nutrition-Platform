@@ -1,0 +1,138 @@
+/* Apply Futura font to the entire form */
+body {
+  font-family: "Futura", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.age-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black; /* Black background */
+  background-image: url("../../../public/BG.jpg"); /* Replace with your image file name */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blurry white overlay in the center */
+.age-form-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 10%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  filter: blur(20px); /* Blur effect */
+  z-index: 1;
+}
+
+.age-form-content {
+  text-align: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Blur effect for the form */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  z-index: 2;
+  position: relative;
+}
+
+.age-question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white; /* White text */
+}
+
+.slider-container {
+  margin-bottom: 20px;
+}
+
+.slider-container label {
+  font-size: 1.1rem;
+  color: white; /* White text */
+}
+
+.slider {
+  width: 100%;
+  margin-top: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff; /* Blue thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff; /* Blue thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.months-dropdown {
+  margin-bottom: 20px;
+}
+
+.months-dropdown label {
+  font-size: 1.1rem;
+  color: white; /* White text */
+  margin-right: 10px;
+}
+
+.months-dropdown select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  color: white; /* White text */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.months-dropdown select:hover {
+  background-color: black;
+}
+
+.continue-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+}
